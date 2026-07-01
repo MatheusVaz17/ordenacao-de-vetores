@@ -19,7 +19,7 @@ int main(){
         valores[i] = dis(gen);
     }
 
-    auto start = high_resolution_clock::now();
+    auto inicio = high_resolution_clock::now();
 
     for(int i = (valores.size() - 1); i > 0; i--){
         bool mudanca = false;
@@ -38,9 +38,9 @@ int main(){
         } 
     }
 
-    auto stop = high_resolution_clock::now();
-    auto durationBubble = duration_cast<milliseconds>(stop - start);
-    cout << ">> Tempo do Bubble Sort: " << (durationBubble.count() / 1000.0) << " s" << endl;
+    auto termino = high_resolution_clock::now();
+    auto duracao = duration_cast<milliseconds>(termino - inicio);
+    cout << ">> Tempo do Bubble Sort: " << (duracao.count() / 1000.0) << " s" << endl;
 
     // cout << "--- Valores ordenados ---" << endl;
     // for (int i = 0; i < valores.size(); i++) {
