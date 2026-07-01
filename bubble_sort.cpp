@@ -1,21 +1,17 @@
 #include <iostream>
-#include <vector>
 
 using namespace std;
 
 int main(){
-    vector<int> valores;
-    int valor_entrada;
-    int valor_temporario;
+    double valores[6] = {5.6, 7.2, 1.7, 3.5, 9.1, 0.3};
+    double valor_temporario;
 
-    cout << "Digite os valores (para parar digite qualquer letra ou caractere):  ";
-
-    while(cin >> valor_entrada){
-        valores.push_back(valor_entrada);
+    cout << "--- Notas sem ordenação: ---" << endl;
+    for(int i = 0; i < 5; i++){
+        cout << "Valor " << i + 1 << ": " << valores[i] << endl;
     }
 
-
-    for(int i = valores.size() - 1; i > 0; i--){
+    for(int i = 5; i > 0; i--){
         bool mudanca = false;
 
         for(int j = 0; j < i; j++){
@@ -33,8 +29,8 @@ int main(){
 
     }
 
-    cout << "--- Valores inseridos ---" << endl;
-    for (int i = 0; i < valores.size(); i++) {
+    cout << "--- Valores ordenados ---" << endl;
+    for (int i = 0; i < 6; i++) {
         cout << "Valor " << i + 1 << ": " << valores[i] << endl;
     }
 
